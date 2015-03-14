@@ -14,10 +14,6 @@ RUN cd $SRC_DIR && curl -LO http://download.redis.io/releases/redis-$REDIS_VERSI
  && tar xzf redis-$REDIS_VERSION.tar.gz && mv redis-$REDIS_VERSION redis && cd redis && make \
  && ln -s $SRC_DIR/redis/src/redis-cli /usr/sbin/redis-cli \
  && ln -s $SRC_DIR/redis/src/redis-server /usr/sbin/redis-server \
- && ln -s $SRC_DIR/redis/src/redis-sentinel /usr/sbin/redis-sentinel \
- && ln -s $SRC_DIR/redis/src/redis-check-aof /usr/sbin/redis-check-aof \
- && ln -s $SRC_DIR/redis/src/redis-benchmark /usr/sbin/redis-benchmark \
- && ln -s $SRC_DIR/redis/src/redis-check-dump /usr/sbin/redis-check-dump \
  && rm -f $SRC_DIR/redis-$REDIS_VERSION.tar.gz
 
 # Add in the /etc/redis directory
